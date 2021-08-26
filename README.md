@@ -1,2 +1,12 @@
-# pygments_woma_lexer
-A pygments lexer for the Woma Programming Language
+# A Pygments Lexer for the Woma Programming Language
+[![PyPI](https://img.shields.io/pypi/v/pygments-woma-lexer?style=for-the-badge)](https://pypi.org/project/pygments-woma-lexer/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pygments-woma-lexer?style=for-the-badge)](https://pypi.org/project/pygments-woma-lexer/)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/pygments-woma-lexer?style=for-the-badge)](https://pypi.org/project/pygments-woma-lexer/)
+----------------------------------------------------
+# How to Use
+Just add the following lines to your docs/conf.py
+```python
+from pygments_woma_lexer import WomaLexer
+from sphinx.highlighting import lexers
+lexers.update(woma=WomaLexer())
+```
