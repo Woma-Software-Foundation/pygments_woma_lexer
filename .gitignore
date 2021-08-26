@@ -1,2 +1,5 @@
 /dist/
+/build/
+/.mypy_cache/
+Pipfile.lock
 *.egg-info
