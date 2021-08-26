@@ -5,9 +5,15 @@
 
 
 # How to Use
-Just add the following lines to your docs/conf.py
+Just add the following lines to your docs/conf.py:
 ```python
 from pygments_woma_lexer import WomaLexer
 from sphinx.highlighting import lexers
 lexers.update(woma=WomaLexer())
+```
+
+Now you can use it like this in ReStructured Text:
+```rst
+.. code:: woma
+  [code goes here]
 ```
