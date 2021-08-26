@@ -1,14 +1,15 @@
 
 from pygments import token
-from pygments.lexer import RegexLexer, bygroups, combined, include
+from pygments.lexer import RegexLexer,RegexLexerMeta, bygroups, combined, include
 
 
-class WomaLexer(RegexLexer):
+class WomaLexer(RegexLexer, metaclass=RegexLexerMeta):
     name = 'woma'
     mimetype = 'text/woma'
 
-    def __init__(self, startinline=True):
-        super(WomaLexer, self).__init__(startinline=startinline)
+    def __init__(self, startinline=True, **options):
+        options.update(startinline=startinline)
+        super(WomaLexer).__init__(**options)
 
     def innerstring_rules(ttype):
         return [
@@ -51,7 +52,7 @@ class WomaLexer(RegexLexer):
             (r'print', token.Name.Builtin),
             (r"\bmain:", token.Name.Label),
             (
-            r'procedure|int|list|float|finite|number|np_scalar_uint|np_uint8|np_uint16|np_uint32|np_uint64|np_scalar_int|np_int8|np_int16|np_int32|np_int64',
+            r'procedure|coroutine|int|list|float|finite|number|np_scalar_uint|np_uint8|np_uint16|np_uint32|np_uint64|np_scalar_int|np_int8|np_int16|np_int32|np_int64',
             token.Keyword.Type),
             (r'[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_][ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_]*', token.Name.Decorator),
             (r"`(?:[^`\n\r\\]|(?:``)|(?:\\(?:[^x]|x[0-9a-fA-F]+)))*`", token.Comment),
