@@ -1,9 +1,9 @@
 
 from pygments import token
-from pygments.lexer import RegexLexer,RegexLexerMeta, bygroups, combined, include
+from pygments.lexer import RegexLexer, bygroups, combined, include
 
 
-class WomaLexer(RegexLexer, metaclass=RegexLexerMeta):
+class WomaLexer(RegexLexer):
     name = 'woma'
     mimetype = 'text/woma'
 
