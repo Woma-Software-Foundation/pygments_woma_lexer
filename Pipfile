@@ -1,0 +1,11 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pygments = ">=2.10.0"
+
+[dev-packages]
+twine = "*"
+
