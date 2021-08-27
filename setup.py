@@ -2,7 +2,7 @@
 from pathlib import Path
 from setuptools import setup, find_packages
 
-__version__ = '1.0.5'
+__version__ = '1.0.7'
 __title__ = 'pygments_woma_lexer'
 __description__ = "A pygments lexer for the Woma Programming Language"
 __author__ = 'Ross J. Duff'
