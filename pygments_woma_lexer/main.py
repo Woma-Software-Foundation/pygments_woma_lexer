@@ -11,9 +11,7 @@ from pygments.lexer import RegexLexer, bygroups, combined, include
 class WomaLexer(RegexLexer):
     name = 'woma'
     mimetype = 'text/woma'
-
-    def __init__(self, startinline=True):
-        super(WomaLexer).__init__(startinline=startinline)
+    startinline = True
 
     def innerstring_rules(ttype):
         return [
