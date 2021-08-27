@@ -13,6 +13,7 @@ lexers.update(woma=WomaLexer())
 Now you can use it like this in ReStructured Text:
 ```rst
 .. code:: woma
+
   [code goes here]
 ```
 ## License
