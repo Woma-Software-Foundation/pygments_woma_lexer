@@ -12,9 +12,8 @@ class WomaLexer(RegexLexer):
     name = 'woma'
     mimetype = 'text/woma'
 
-    def __init__(self, startinline=True, **options):
-        options.update(startinline=startinline)
-        super(WomaLexer).__init__(**options)
+    def __init__(self, startinline=True):
+        super(WomaLexer).__init__(startinline=startinline)
 
     def innerstring_rules(ttype):
         return [
