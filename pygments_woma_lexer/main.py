@@ -58,7 +58,7 @@ class WomaLexer(RegexLexer):
             token.Keyword.Type),
             (r'[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_][ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_]*', token.Name.Decorator),
             (r"`(?:[^`\n\r\\]|(?:``)|(?:\\(?:[^x]|x[0-9a-fA-F]+)))*`", token.Comment),
-            (r'[<\^>]|[<\*>]|<@>|->|[<-]|\)\)|#|(?<=\))\.{3,}|nullit', token.Keyword),
+            (r'[<\^>]|[<\*>]|<@>|->|[<-]|\)\)|#|(?<=[\)\]\}])\.{3,}|nullit', token.Keyword),
             (r'(?<=\w)\.(?=\w)', token.Punctuation),
             (r'[]{}:(),;[]', token.Punctuation),
             (r'(\d(?:_?\d)*\.(?:\d(?:_?\d)*)?|(?:\d(?:_?\d)*)?\.\d(?:_?\d)*)([eE][+-]?\d(?:_?\d)*)?', token.Number.Float),
